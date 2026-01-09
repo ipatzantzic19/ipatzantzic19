@@ -85,10 +85,10 @@
 <table>
   <tr>
     <td align="center">
-      <img src="./node_scripts/scripts/github_stats.png" height="150" alt="Estadísticas personalizadas de GitHub" />
+      <img src="./node_scripts/scripts/github_stats.png" height="190" alt="Estadísticas personalizadas de GitHub" />
     </td>
     <td align="center">
-      <img src="./node_scripts/scripts/language_chart.png" height="150" alt="Lenguajes más usados" />
+      <img src="./node_scripts/scripts/language_chart.png" height="190" alt="Lenguajes más usados" />
     </td>
   </tr>
   </table>
