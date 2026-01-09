@@ -64,53 +64,14 @@ def generate_language_chart(data):
     plt.close(fig)
     print("✅ Imagen `languages.png` generada correctamente.")
 
+"""Script para generar una imagen de lenguajes usados.
+
+Genera scripts/languages.png a partir de la API de GitHub,
+pero ya no modifica el README.md. La sección del README
+se gestiona manualmente.
+"""
+
 # Generar la imagen si hay datos
 if sorted_languages:
     generate_language_chart(sorted_languages)
 #---------------------------------------------
-
-# Leer el README actual
-readme_path = "README.md"
-with open(readme_path, "r", encoding="utf-8") as file:
-    readme_content = file.readlines()
-
-# Identificar la sección a actualizar
-start_marker = "<!-- LANGUAGES-START -->\n"
-end_marker = "<!-- LANGUAGES-END -->\n"
-
-if start_marker in readme_content and end_marker in readme_content:
-    start_index = readme_content.index(start_marker) + 1
-    end_index = readme_content.index(end_marker)
-else:
-    print("⚠️ No se encontraron los marcadores en el README. Verifica que estén presentes.")
-    exit(1)
-
-new_table = [
-    "## 📊 Lenguajes Usados\n",
-    "![Lenguajes más usados](./scripts/languages.png)\n"
-]
-
-# Agregar un timestamp para asegurar cambios en `git`
-timestamp = f"\n<!-- Última actualización: {time.strftime('%Y-%m-%d %H:%M:%S UTC')} -->\n"
-new_table.append(timestamp)
-
-# Mostrar la nueva tabla generada antes de escribirla
-print("📊 Nueva tabla generada en README.md:")
-for line in new_table:
-    print(line.strip())
-
-# Reemplazar la sección en el README
-updated_readme = readme_content[:start_index] + new_table + readme_content[end_index:]
-
-# Verificar si realmente hay un cambio en el contenido
-new_content = "".join(updated_readme)
-
-if new_content == "".join(readme_content):
-    print("✅ No se detectaron cambios en README.md. No es necesario actualizar.")
-    exit(0)  # No genera un commit si no hay cambios
-
-# Guardar el archivo solo si hay cambios
-with open(readme_path, "w", encoding="utf-8") as file:
-    file.writelines(updated_readme)
-
-print("✅ README.md actualizado correctamente.")

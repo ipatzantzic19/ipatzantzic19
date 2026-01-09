@@ -1,0 +1,25 @@
+{
+  "name": "ipatzantzic19",
+  "version": "1.0.0",
+  "description": "<h1 align=\"left\">Hola, mi nombre es Isai Patzán 👋</h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ipatzantzic19/ipatzantzic19.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ipatzantzic19/ipatzantzic19/issues"
+  },
+  "homepage": "https://github.com/ipatzantzic19/ipatzantzic19#readme",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "canvas": "^3.2.0"
+  }
+}
