@@ -67,3 +67,22 @@
 </div>
 
 ###
+
+## 📈 GitHub Stats
+
+<div align="center">
+  <img src="./node_scripts/scripts/github_stats.png" height="250" alt="Estadísticas personalizadas de GitHub" />
+</div>
+
+<!-- LANGUAGES-START -->
+## 📊 Lenguajes Usados
+![Lenguajes más usados](./scripts/languages.png)
+
+<br />
+
+<div align="center">
+  <img src="./node_scripts/scripts/language_chart.png" alt="Lenguajes más usados (tarjeta)" />
+</div>
+
+<!-- Última actualización: 2026-01-09 11:26:34 UTC -->
+<!-- LANGUAGES-END -->
